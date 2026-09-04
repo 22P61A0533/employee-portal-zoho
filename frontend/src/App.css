@@ -1,0 +1,616 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  color: #1f2937;
+}
+
+button {
+  border: none;
+  border-radius: 6px;
+  padding: 10px 16px;
+  cursor: pointer;
+  background: #2563eb;
+  color: white;
+  font-size: 14px;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* LOGIN */
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eef2ff;
+}
+
+.login-card {
+  width: 380px;
+  padding: 40px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.logo-circle {
+  width: 55px;
+  height: 55px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  background: #2563eb;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.login-card h1 {
+  margin: 0 0 10px;
+  font-size: 30px;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+.subtitle {
+  color: #64748b;
+  margin: 0 0 30px;
+  line-height: 1.5;
+}
+
+.login-card form {
+  text-align: left;
+}
+
+.login-card label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 13px;
+  margin-bottom: 17px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.login-button {
+  width: 100%;
+  margin-top: 5px;
+}
+
+.error {
+  color: #dc2626;
+}
+
+.login-footer {
+  margin-top: 25px;
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+/* HEADER */
+
+.header {
+  background: white;
+  padding: 20px 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 28px;
+  line-height: 1.3;
+  display: block;
+}
+
+.header p {
+  margin: 8px 0 0;
+  color: #64748b;
+  font-size: 15px;
+  line-height: 1.5;
+  display: block;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-info span {
+  color: #64748b;
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+.avatar,
+.small-avatar {
+  border-radius: 50%;
+  background: #dbeafe;
+  color: #1d4ed8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+}
+
+.small-avatar {
+  width: 32px;
+  height: 32px;
+  font-size: 13px;
+}
+
+.role {
+  background: #dbeafe;
+  color: #1d4ed8;
+  padding: 6px 11px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.logout-button {
+  background: #ef4444;
+}
+
+.logout-button:hover {
+  background: #dc2626;
+}
+
+/* LAYOUT */
+
+.portal {
+  min-height: 100vh;
+}
+
+.layout {
+  display: flex;
+  min-height: calc(100vh - 90px);
+}
+
+.sidebar {
+  width: 220px;
+  background: #1e293b;
+  padding: 25px 15px;
+}
+
+.sidebar-title {
+  color: #94a3b8;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 0 10px 10px;
+  letter-spacing: 0.5px;
+}
+
+.admin-title {
+  margin-top: 25px;
+}
+
+.sidebar button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 8px;
+  background: transparent;
+}
+
+.sidebar button:hover,
+.sidebar button.active-menu {
+  background: #334155;
+}
+
+.content {
+  flex: 1;
+  padding: 35px;
+  overflow-x: auto;
+}
+
+/* PAGE HEADINGS */
+
+.page-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.page-heading h2 {
+  margin: 0 0 7px;
+}
+
+.page-heading p {
+  margin: 0;
+  color: #64748b;
+}
+
+.security-badge {
+  background: #dcfce7;
+  color: #166534;
+  padding: 8px 13px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+/* DASHBOARD */
+
+.user-info {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0 30px;
+}
+
+.user-info p {
+  margin: 8px 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 35px;
+}
+
+.stat-card {
+  background: white;
+  padding: 18px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+.stat-icon {
+  font-size: 25px;
+}
+
+.stat-card span {
+  display: block;
+  color: #64748b;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.stat-card strong {
+  font-size: 17px;
+}
+
+.section-heading {
+  margin-bottom: 20px;
+}
+
+.section-heading h2 {
+  margin: 0 0 5px;
+}
+
+.section-heading p {
+  color: #64748b;
+  margin: 0;
+}
+
+.service-grid,
+.role-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.service-card,
+.role-card,
+.admin-summary,
+.form-card,
+.table-card,
+.rbac-info {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.service-card h3,
+.role-card h3 {
+  margin-top: 10px;
+}
+
+.service-card p,
+.role-card p,
+.admin-summary p,
+.rbac-info p {
+  color: #64748b;
+  line-height: 1.5;
+}
+
+.service-icon {
+  font-size: 30px;
+}
+
+.service-card button {
+  margin-top: 10px;
+}
+
+.admin-summary {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-summary h2 {
+  margin-top: 0;
+}
+
+/* USERS */
+
+.primary-button {
+  background: #2563eb;
+}
+
+.form-card {
+  margin-bottom: 25px;
+}
+
+.form-card h3 {
+  margin-top: 0;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.form-grid input {
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.form-actions {
+  margin-top: 18px;
+  display: flex;
+  gap: 10px;
+}
+
+.cancel-button {
+  background: #64748b;
+}
+
+.cancel-button:hover {
+  background: #475569;
+}
+
+/* TABLE */
+
+.table-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.table-header {
+  padding: 20px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.table-header h3 {
+  margin: 0;
+}
+
+.table-header span {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+th,
+td {
+  padding: 14px 18px;
+  border-bottom: 1px solid #e2e8f0;
+  text-align: left;
+  white-space: nowrap;
+}
+
+th {
+  background: #f8fafc;
+  font-size: 13px;
+}
+
+td {
+  font-size: 14px;
+}
+
+.employee-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+table select {
+  padding: 7px 9px;
+  border: 1px solid #cbd5e1;
+  border-radius: 5px;
+  background: white;
+}
+
+.status {
+  color: #16a34a;
+  font-size: 13px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 7px;
+}
+
+.edit-button {
+  background: #f59e0b;
+}
+
+.edit-button:hover {
+  background: #d97706;
+}
+
+.delete-button {
+  background: #ef4444;
+}
+
+.delete-button:hover {
+  background: #dc2626;
+}
+
+.action-badge {
+  background: #eff6ff;
+  color: #2563eb;
+  padding: 5px 9px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* ROLES */
+
+.role-card-icon {
+  font-size: 30px;
+}
+
+.role-card ul {
+  padding-left: 18px;
+  line-height: 2;
+  color: #475569;
+}
+
+.rbac-info {
+  margin-top: 25px;
+}
+
+.rbac-info h3 {
+  margin-top: 0;
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+  .header {
+    padding: 18px 20px;
+  }
+
+  .profile-info {
+    display: none;
+  }
+
+  .content {
+    padding: 25px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .profile {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .content {
+    padding: 20px;
+  }
+
+  .login-card {
+    width: 90%;
+  }
+
+  .page-heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .admin-summary {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+}
